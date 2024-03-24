@@ -98,7 +98,7 @@
 ;;(setq lsp-enable-snippet nil)
 
 ;; Disable vc integration for find-file, it's mostly annoying, especially in large repositories.  If
-;; memory serves, this got turned of for the Firefox source tree.
+;; memory serves, this got turned off for the Firefox source tree.
 ;;
 ;; Belt and suspenders on this one
 
@@ -126,7 +126,7 @@
 
 (defun sgrep (pattern)
   "Recursive grep across *sgrep-files* within *sgrep-dir*."
-  (interactive 
+  (interactive
    (progn
      (grep-compute-defaults)		; A hack - forces grep to be loaded
      (list (let* ((def (current-word))
@@ -138,7 +138,7 @@
 
 (defun cgrep (pattern)
   "Recursive grep across *cgrep-files* within *sgrep-dir*."
-  (interactive 
+  (interactive
    (progn
      (grep-compute-defaults)		; A hack - forces grep to be loaded
      (list (let* ((def (current-word))
@@ -157,7 +157,7 @@
 	(setq dir (directory-file-name dir))
 	(while (and dir
 		    (let ((base (file-name-nondirectory dir)))
-		      (and base 
+		      (and base
 			   (not (string-match-p "^m(ozilla)?-[a-z]+" base)))))
 	  (if (not (string-match-p "m(ozilla)?-[a-z]+" dir))
 	      (setq dir nil)
