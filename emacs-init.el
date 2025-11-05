@@ -12,6 +12,9 @@
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
+;; https://github.com/lars-t-hansen/gotags
+(setq etags-program-name "gotags")
+
 (defun tool-bar-off ()
   (if (fboundp 'tool-bar-mode)
       (if (>= emacs-major-version 24)
