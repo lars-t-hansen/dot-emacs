@@ -14,6 +14,7 @@
 
 ;; https://github.com/lars-t-hansen/gotags
 (setq etags-program-name "gotags")
+(etags-regen-mode 1)
 
 (defun tool-bar-off ()
   (if (fboundp 'tool-bar-mode)
