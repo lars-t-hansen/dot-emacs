@@ -12,9 +12,10 @@
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
-;; https://github.com/lars-t-hansen/gotags
+;; https://github.com/lars-t-hansen/gotags, defers to etags for non-Go sources
 (setq etags-program-name "gotags")
 (etags-regen-mode 1)
+(setq tags-case-fold-search nil)
 
 (defun tool-bar-off ()
   (if (fboundp 'tool-bar-mode)
