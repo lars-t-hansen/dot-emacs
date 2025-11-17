@@ -14,8 +14,10 @@
 
 ;; https://github.com/lars-t-hansen/gotags, defers to etags for non-Go sources
 (setq etags-program-name "gotags")
-(etags-regen-mode 1)
 (setq tags-case-fold-search nil)
+(if (or (> emacs-major-version 30)
+	(and (= emacs-major-version 30) (>= emacs-minor-version 1)))
+    (etags-regen-mode 1))
 
 (defun tool-bar-off ()
   (if (fboundp 'tool-bar-mode)
