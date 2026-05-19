@@ -16,6 +16,7 @@
 (setq etags-program-name "gotags")
 (etags-regen-mode 1)
 (setq tags-case-fold-search nil)
+(setq etags-regen-program-options '("--quiet"))
 
 (defun tool-bar-off ()
   (if (fboundp 'tool-bar-mode)
